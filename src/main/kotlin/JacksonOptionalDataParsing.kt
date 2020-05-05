@@ -65,6 +65,12 @@ class JacksonOptionalDataParsing {
 
 data class Person(var name: String, var occupation: String?)
 
+// Will have default constructor
+//class Person{
+//    lateinit var name: String
+//    var occupation: String? = null
+//}
+
 //data class Person(
 //    @JsonProperty("name") val name: String,
 //    @JsonProperty("occupation") val occupation: String?
