@@ -55,6 +55,7 @@ class JacksonOptionalDataParsing {
             """.trimIndent()
 
 //            val mapper = ObjectMapper()
+            // will use kotlin.jvm reflection classes for KClass to Java class mapping, same for KFunction
             val mapper = ObjectMapper().registerKotlinModule()
             println(mapper.readValue(dataJSONStr, Person::class.java))
 
@@ -63,18 +64,23 @@ class JacksonOptionalDataParsing {
 }
 // ============================ JSON Specific Data Classes ===================
 
+// won't have a default constructor
 data class Person(var name: String, var occupation: String?)
 
 // Will have default constructor
-//class Person{
-//    lateinit var name: String
-//    var occupation: String? = null
-//}
+/*
+class Person{
+    lateinit var name: String
+    var occupation: String? = null
+}
+*/
 
-//data class Person(
-//    @JsonProperty("name") val name: String,
-//    @JsonProperty("occupation") val occupation: String?
-//)
+/*
+data class Person(
+    @JsonProperty("name") val name: String,
+    @JsonProperty("occupation") val occupation: String?
+)
+*/
 
 // ============================ XML Specific Data Classes ===================
 data class TABLES(@JacksonXmlProperty(localName = "TABLE") val table: TABLE)
