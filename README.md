@@ -1,5 +1,7 @@
 <h1 align="center">jackson-parsing-kotlin</h1>
-Demonstrate the use of Jackson with kotlin for parsing and missing value use cases
+Demonstrate the use of Jackson with kotlin for parsing and missing value use cases.
+
+Follow [parsing data with Jackson using kotlin][0] for more details.
 
 Tools
 -----
@@ -12,6 +14,10 @@ License
 -----------
 <details>
 <summary>Vew MIT License</summary>
+
+
+[0]: https://proandroiddev.com/parsing-optional-values-with-jackson-and-kotlin-36f6f63868ef
+
 
 ```
 Copyright (c) 2020 Pavneet Singh
